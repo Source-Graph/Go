@@ -1,2 +1,19 @@
-- debug:
-    msg: "{{linux_download}}"
+# https://go.dev/doc/install
+
+- name: Download Go
+  ansible.builtin.get_url:
+    url: "{{linux_download}}"
+    dest: "{{local_mirror}}/{{file_name}}"
+
+- name: Remove old install
+  ansible.builtin.file:
+    path: /usr/local/go
+    state: absent
+  become: true
+
+- name: Install Go
+  ansible.builtin.unarchive:
+    src: "{{local_mirror}}/{{file_name}}"
+    dest: /usr/local/
+    remote_src: yes
+  become: true

@@ -2,3 +2,4 @@
 dependencies:
 - uni/get
 - Go/install
+- Go/environment variable
