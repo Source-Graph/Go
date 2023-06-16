@@ -1,0 +1,4 @@
+---
+dependencies:
+- uni/get
+- Go/install
