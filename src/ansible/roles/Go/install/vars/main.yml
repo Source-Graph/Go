@@ -1,7 +1,4 @@
-version: 1.20.5
 arch: "{{'amd64' if ansible_architecture == 'x86_64' else 'arm64' if ansible_architecture == 'arm64'}}"
-linux_download: https://go.dev/dl/go{{version}}.linux-{{arch}}.tar.gz
-
-
+linux_download: https://go.dev/dl/go{{go_version}}.linux-{{arch}}.tar.gz
 
 common: ["official download", "repository"]
