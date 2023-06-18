@@ -1,7 +1,7 @@
 ---
-# - hosts: localhost
-#   roles:
-#   - .pre
+- hosts: localhost
+  roles:
+#  - .pre
 
 # init is not needed if you're only running on localhost!
 - hosts: localhost
